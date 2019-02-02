@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class='header'> Registration</h1>
+    <h1> Registration</h1>
     <input
       type="email"
       name="email"
@@ -8,7 +8,7 @@
       placeholder="email" />
     <br>
     <input
-    type="password"
+      type="password"
       name="password"
       v-model="password"
       placeholder="password" />
@@ -52,18 +52,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .header{
-    font-size: 20px;
-    font-style: oblique;
-    color: #1f11ff;
-  }
-  input{
-    height: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
-    
-    
-  }
   .error{
     color: red;
   }

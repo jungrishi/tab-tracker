@@ -38,7 +38,9 @@ const {error, value} = Joi.validate(req.body, schema)
         } 
       }
       else {
+        console.log('DDDDDDDDDDDDDone');
         next()
+        
       }
   }
 }

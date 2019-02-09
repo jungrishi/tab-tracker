@@ -1,10 +1,10 @@
 <template>
-
+    <!-- 1 -->
     <v-layout column>
       <v-flex xs6 md4 lx2>
         <div class="white-elevation2">
           <v-toolbar flat dense dark class="primary">
-            <v-toolbar-title>Register</v-toolbar-title>
+            <v-toolbar-title>Login</v-toolbar-title>
            </v-toolbar>
 
           <div class="pa-3">
@@ -21,8 +21,8 @@
             <v-btn
               dark
               class="success"
-              @click= "register">
-              Register
+              @click= "login">
+              Login
             </v-btn>
           </div>
           </div>
@@ -44,16 +44,16 @@ export default {
     }
   },
   methods: {
-    async register () {
+    async login () {
       try {
-         await AuthenticationService.register({
+         await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
       } catch (error) {
         this.error = error.response.data.error
       }
-    }
+     }
   }
 }
 

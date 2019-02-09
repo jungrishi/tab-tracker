@@ -1,5 +1,6 @@
 /* eslint-disable */
 // define web application; entry point for nodemon(server) to exec
+// console.log('helo')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -22,5 +23,5 @@ require('./routes')(app)
 sequelize.sync()
   .then(() => {
     app.listen(config.port)
-    console.log(`server started on prt ${config.port}`)
+    console.log(`server started on port ${config.port}`)
   })

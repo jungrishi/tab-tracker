@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'vue-flex',
+1 verbose cli   'vue-flex/dist/vue-flex.css' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData vue-flex
+8 silly fetchPackageMetaData vue-flex/dist/vue-flex.css
+9 silly fetchNamedPackageData vue-flex
+10 silly mapToRegistry name vue-flex
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/vue-flex
+14 silly fetchOtherPackageData vue-flex/dist/vue-flex.css
+15 silly cache add args [ 'vue-flex/dist/vue-flex.css', null ]
+16 verbose cache add spec vue-flex/dist/vue-flex.css
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: 'vue-flex/dist/vue-flex.css',
+17 silly cache add   scope: null,
+17 silly cache add   name: null,
+17 silly cache add   rawSpec: 'vue-flex/dist/vue-flex.css',
+17 silly cache add   spec: '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css',
+17 silly cache add   type: 'local' }
+18 error addLocal Could not install /home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css
+19 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css'
+19 silly fetchPackageMetaData  error for vue-flex/dist/vue-flex.css { Error: ENOENT: no such file or directory, open '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css'
+19 silly fetchPackageMetaData   errno: -2,
+19 silly fetchPackageMetaData   code: 'ENOENT',
+19 silly fetchPackageMetaData   syscall: 'open',
+19 silly fetchPackageMetaData   path: '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css' }
+20 verbose request uri https://registry.npmjs.org/vue-flex
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 8:16:46 PM
+23 verbose request id cc4be34fd6255b16
+24 verbose etag W/"36925689e8e3afc1b295af62944a931c"
+25 verbose lastModified Fri, 07 Sep 2018 17:00:45 GMT
+26 http request GET https://registry.npmjs.org/vue-flex
+27 http 304 https://registry.npmjs.org/vue-flex
+28 verbose headers { date: 'Thu, 07 Feb 2019 14:31:47 GMT',
+28 verbose headers   connection: 'keep-alive',
+28 verbose headers   'set-cookie':
+28 verbose headers    [ '__cfduid=d3eae5ad43179057367a2c9657feba6931549549906; expires=Fri, 07-Feb-20 14:31:46 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+28 verbose headers   'cf-cache-status': 'HIT',
+28 verbose headers   'cache-control': 'max-age=300',
+28 verbose headers   'cf-ray': '4a568fe6bbc2a763-KTM',
+28 verbose headers   etag: '"36925689e8e3afc1b295af62944a931c"',
+28 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+28 verbose headers   'last-modified': 'Fri, 07 Sep 2018 17:00:45 GMT',
+28 verbose headers   vary: 'accept-encoding, accept',
+28 verbose headers   'x-amz-meta-rev': '18-bb6195164095c9e6f4db907586a27a91',
+28 verbose headers   server: 'cloudflare' }
+29 silly get cb [ 304,
+29 silly get   { date: 'Thu, 07 Feb 2019 14:31:47 GMT',
+29 silly get     connection: 'keep-alive',
+29 silly get     'set-cookie':
+29 silly get      [ '__cfduid=d3eae5ad43179057367a2c9657feba6931549549906; expires=Fri, 07-Feb-20 14:31:46 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+29 silly get     'cf-cache-status': 'HIT',
+29 silly get     'cache-control': 'max-age=300',
+29 silly get     'cf-ray': '4a568fe6bbc2a763-KTM',
+29 silly get     etag: '"36925689e8e3afc1b295af62944a931c"',
+29 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+29 silly get     'last-modified': 'Fri, 07 Sep 2018 17:00:45 GMT',
+29 silly get     vary: 'accept-encoding, accept',
+29 silly get     'x-amz-meta-rev': '18-bb6195164095c9e6f4db907586a27a91',
+29 silly get     server: 'cloudflare' } ]
+30 verbose etag https://registry.npmjs.org/vue-flex from cache
+31 verbose get saving vue-flex to /home/rishijung/.npm/registry.npmjs.org/vue-flex/.cache.json
+32 silly rollbackFailedOptional Starting
+33 silly rollbackFailedOptional Finishing
+34 silly runTopLevelLifecycles Starting
+35 silly runTopLevelLifecycles Finishing
+36 silly install printInstalled
+37 verbose stack Error: ENOENT: no such file or directory, open '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css'
+38 verbose cwd /home/rishijung/tab-tracker
+39 error Linux 4.15.0-43-generic
+40 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save" "vue-flex" "vue-flex/dist/vue-flex.css"
+41 error node v8.10.0
+42 error npm  v3.5.2
+43 error path /home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css
+44 error code ENOENT
+45 error errno -2
+46 error syscall open
+47 error enoent ENOENT: no such file or directory, open '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css'
+48 error enoent ENOENT: no such file or directory, open '/home/rishijung/tab-tracker/vue-flex/dist/vue-flex.css'
+48 error enoent This is most likely not a problem with npm itself
+48 error enoent and is related to npm not being able to find a file.
+49 verbose exit [ -2, true ]

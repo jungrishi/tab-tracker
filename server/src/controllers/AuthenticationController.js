@@ -32,6 +32,7 @@ module.exports = {
       const user = await User.findOne({
         where: {
           email:email
+          //just
         }
       })
       // console.log('user',user.toJSON())
@@ -41,9 +42,9 @@ module.exports = {
         })
       }
 
-      const isPasswordValid = password === user.password
-      console.log(password, user.password)
-      console.log(isPasswordValid)
+      const isPasswordValid = await user.comparePassword(password)
+      // console.log(password, user.password)
+      // console.log(isPasswordValid)
 
       if(!isPasswordValid){
         res.status(403).send({

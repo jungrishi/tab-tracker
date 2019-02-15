@@ -1,4 +1,5 @@
 /* eslint-disable */
+// const path = require('path')
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
@@ -10,6 +11,7 @@ module.exports = {
         dialect: process.env.DIALECT || 'sqlite',
             // location of d
         host: process.env.HOST || 'localhost',
+        // storage: path.resolve(__dirname, '../../tabtracker.sqlite'),
             //where to store
         storage: './tabtracker.sqlite'     
       }

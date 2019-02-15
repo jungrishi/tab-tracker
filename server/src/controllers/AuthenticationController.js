@@ -17,11 +17,12 @@ module.exports = {
   async register (req, res) {
     try{
       const user = await User.create(req.body)
+      
       const userJson = user.toJSON()
       res.send({
         user: userJson,
         token: jwtSignUser(userJson)
-          })
+        })
     } catch (err){
         res.status(400).send({
           error: 'this is used.'
@@ -39,19 +40,22 @@ module.exports = {
           //just
         }
       })
-      // console.log('user',user.toJSON())
+      console.log('user',user.toJSON())
       if(!user){
-        res.status(403).send({
-          error: 'the login inf was incorrect'
+        console.log('errororor')
+        return res.status(403).send({
+          
+          error: 'the login inf was incorrectnkcnkdnkdnk'
         })
       }
 
       const isPasswordValid = await user.comparePassword(password)
-      // console.log(password, user.password)
-      // console.log(isPasswordValid)
+      //console.log(password, user.password)
+      //console.log(isPasswordValid)
 
       if(!isPasswordValid){
-        res.status(403).send({
+        console.log('errorororpassword')
+        return res.status(403).send({
           error: 'the login inf was incorrect'
         })
       }
@@ -61,8 +65,8 @@ module.exports = {
         token: jwtSignUser(userJson)
             })
     } catch (err){
-        res.status(500).send({
-          error: 'Invalid login inF'
+      res.status(500).send({
+          error: 'SERVER ERROR'
     // email already exist
 
         })

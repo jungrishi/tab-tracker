@@ -8,6 +8,9 @@
            </v-toolbar>
 
           <div class="pa-3">
+            <form
+              name="tab-tracker-form"
+              autocomplete="off">
             <v-text-field
               label="email"
               v-model="email"
@@ -15,9 +18,14 @@
             <br>
             <v-text-field
               label="password"
+              type="password"
               v-model="password"
+              autocomplete="new-password"
             ></v-text-field>
+            </form>
+            <br>
           <div class="error" v-html="error" color:red/>
+            <br>
             <v-btn
               dark
               class="success"

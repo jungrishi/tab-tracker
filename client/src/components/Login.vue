@@ -15,6 +15,7 @@
             <br>
             <v-text-field
               label="password"
+              type="password"
               v-model="password"
             ></v-text-field>
           <div class="error" v-html="error" color:red/>
@@ -46,7 +47,7 @@ export default {
   methods: {
     async login () {
       try {
-         await AuthenticationService.login({
+         const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })

@@ -15,19 +15,30 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items>
-          <v-btn flat dark
+          <v-btn
+            v-if="!$store.state.isUserLoggedIn"
+            flat dark
             @click="navigateTo({name: 'login'})">
               Log In
             <!-- <router-link to="register" style="color: white; text-decoration: none; font-weight: bold">
               Sign Up
             </router-link> -->
           </v-btn>
-        </v-toolbar-items>
-
-        <v-toolbar-items>
-          <v-btn flat dark
+          <v-btn
+            v-if="!$store.state.isUserLoggedIn"
+            flat dark
             @click="navigateTo({name: 'register'})">
               Sign Up
+            <!-- <router-link to="register" style="color: white; text-decoration: none; font-weight: bold">
+              Sign Up
+            </router-link> -->
+          </v-btn>
+
+          <v-btn
+            v-if="$store.state.isUserLoggedIn"
+            flat dark
+            @click="logout">
+              Log Out
             <!-- <router-link to="register" style="color: white; text-decoration: none; font-weight: bold">
               Sign Up
             </router-link> -->
@@ -44,6 +55,14 @@ export default {
   methods:{
     navigateTo (route){
       this.$router.push(route)
+    },
+    logout () {
+      this.$store.dispatch('setToken',null)
+      this.$store.dispatch('setUser',null)
+      //TDO: redirect to homepage
+      this.$router.push({
+        name:'root'
+      })
     }
   }
 }
